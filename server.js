@@ -4,11 +4,10 @@ const app = express();
 
 app.get("/", (req, res) => {
   console.log("here");
-  // to send data back to user we need to send something with the response 
 
-  // generally will want to use something more specific like a status
-  // for the user you would want to include a message -- check console to make sure status code still appears as it should
-  res.status(500).send("Oops... error");
+  // can call json method instead as well and the json code message is sent down properly
+  // using some type of api and want to send json to client? this is the best way to do so
+  res.status(500).json({ message: "error" });
 })
 
 
