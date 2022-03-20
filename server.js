@@ -7,7 +7,8 @@ app.get("/", (req, res) => {
 
   // can call json method instead as well and the json code message is sent down properly
   // using some type of api and want to send json to client? this is the best way to do so
-  res.status(500).json({ message: "error" });
+  res.download('server.js')
+// server.js was successfully downloaded
 })
 
 
