@@ -7,6 +7,9 @@
   <title>Document</title>
 </head>
 <body>
-  Hello <%= text%>
+<!-- locals is always defined -- so if there' an error in the server with the "text" input it will override and find the text property -->
+  Hello <%= locals.text || "Default" %>
+
+<!-- locals trick is good to get around the fact that variables may or may not be defined in the server -->
 </body>
 </html>

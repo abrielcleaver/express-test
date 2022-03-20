@@ -6,7 +6,7 @@ app.set('view engine', 'ejs')
 app.get("/", (req, res) => {
   console.log("here");
 
-  res.render("index", { text: "World" })
+  res.render("index", { text123: "World" })
 })
 
 
